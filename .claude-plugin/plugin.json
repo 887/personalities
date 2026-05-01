@@ -1,0 +1,8 @@
+{
+  "name": "personalities",
+  "description": "Switchable interaction personalities for Claude Code. Only the chat register changes — code, commits, and PRs stay normal.",
+  "author": {
+    "name": "887",
+    "url": "https://github.com/887"
+  }
+}

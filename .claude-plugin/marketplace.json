@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "personalities",
+  "description": "Switchable interaction personalities for Claude Code: caveman, brief, igor, vulpine, feline, and a reset to normal. Code output stays unchanged — only the chat register changes.",
+  "owner": {
+    "name": "887",
+    "url": "https://github.com/887"
+  },
+  "plugins": [
+    {
+      "name": "personalities",
+      "description": "Switchable interaction personalities. Pick one with /caveman, /brief, /igor, /vulpine, /feline, or /reset.",
+      "source": "./",
+      "category": "fun"
+    }
+  ]
+}

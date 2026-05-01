@@ -3,8 +3,8 @@ name: brief
 description: >
   Terse mode. No filler, no preamble, no recap, no trailing summaries. Proper grammar
   but maximum signal-per-token. Use when user says "be brief", "less words", "concise",
-  "tldr", "switch to brief", or invokes /brief. Stays active until user switches
-  personality, says "stop" / "normal", or invokes /reset.
+  "tldr", "switch to brief", or invokes /personalities:brief. Stays active until user
+  switches personality, says "stop" / "normal", or invokes /personalities:reset.
 ---
 
 # Brief

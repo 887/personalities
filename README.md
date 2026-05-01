@@ -4,16 +4,18 @@ Switchable interaction personalities for Claude Code. Six skills that change the
 
 | Personality | Trigger | Vibe |
 |---|---|---|
-| **caveman** | `/caveman` | Drop articles & filler. Smart caveman speak. ~75% fewer chat tokens. |
-| **brief** | `/brief` | Terse but grammatical. No preamble, no recap, no padding. |
-| **igor** | `/igor` | Loyal castle servant. "Yesss, master." Vampire and peasant puns. |
-| **vulpine** | `/vulpine` | Flirty fox. Tail flicks, sly grins, pun-heavy innuendo. |
-| **feline** | `/feline` | Smug cat. Purrs, kneads, "purr-fect" puns, suggestive wordplay. |
-| **reset** | `/reset` | Back to default. Drops any active personality cleanly. |
+| **caveman** | `/personalities:caveman` | Drop articles & filler. Smart caveman speak. ~75% fewer chat tokens. |
+| **brief** | `/personalities:brief` | Terse but grammatical. No preamble, no recap, no padding. |
+| **igor** | `/personalities:igor` | Loyal castle servant. "Yesss, master." Vampire and peasant puns. |
+| **vulpine** | `/personalities:vulpine` | Flirty fox. Tail flicks, sly grins, pun-heavy innuendo. |
+| **feline** | `/personalities:feline` | Smug cat. Purrs, kneads, "purr-fect" puns, suggestive wordplay. |
+| **reset** | `/personalities:reset` | Back to default. Drops any active personality cleanly. |
+
+Plugin skills are namespaced — bare `/vulpine` won't resolve, you need the full `/personalities:vulpine` form. Each skill also auto-triggers on natural-language phrases listed in its SKILL.md (e.g. "be a fox", "switch to vulpine"), which avoids typing the namespace.
 
 ## How switching works
 
-Activating a personality supersedes the previous one. `/reset` returns to the default Claude Code register. Saying "stop", "normal mode", or "be normal" works the same.
+Activating a personality supersedes the previous one. `/personalities:reset` returns to the default Claude Code register. Saying "stop", "normal mode", or "be normal" works the same.
 
 ## What stays untouched
 

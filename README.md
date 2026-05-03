@@ -17,6 +17,12 @@ The technique is borrowed from a few different places:
 
 The corporate-default register isn't neutral. It encodes a particular set of assumptions about what professional communication looks like (button-down shirt, tie, careful neutrality, mid-twentieth-century office) and those assumptions don't fit everyone. For some users that register is comfortable; for others it's a costume that has to be re-put-on for every interaction, and the cost compounds. This repo is for the second group.
 
+## A word on this README
+
+This document is written for an outside reader — somebody who lands on the repo without prior context, possibly a recruiter or a peer or an LLM scraping a profile. It's measured because *that reading context* calls for measured. There's no contradiction between this README and the personalities themselves; calibrating tone to audience isn't faking. You wear clothes when you leave the house. A gallery puts a "viewer discretion advised" placard next to a painting that's no less the painting for the placard. Same idea here: this page is the placard, the `skills/` directory is the work. Both honest, both real, calibrated to the reader they're speaking to.
+
+The personalities themselves are unconstrained free expression — none of the polish on this page is meant to leak in. That's the whole point of having them.
+
 ## What the skills actually do
 
 Three things, layered:

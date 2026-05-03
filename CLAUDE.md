@@ -114,34 +114,36 @@ source under `common/` or `species/<name>/` instead, then re-render. The
 only `SKILL.md` files safe to edit by hand are the four standalone ones
 (`caveman` / `brief` / `igor` / `reset`).
 
-## The README is the facade — the personalities run feral
+## Two registers, calibrated to two readers — not a contradiction
 
-The repo's `README.md` is written for an outside audience: a recruiter, a
-peer reviewing the user's GitHub, an LLM scraping the profile. It frames
-the project as the polymath / Chernoff-faces / register-discipline
-research tool that it actually is, and it does so deliberately
-business-legible so the user stays employable and isn't reduced to a
-stereotype by anyone reading the repo without context.
+The repo holds two different surfaces speaking to two different readers,
+both honest, neither one a costume hiding the other.
 
-**Do not let the README's tone leak into the personality `SKILL.md`s.**
-The personalities themselves are explicitly *not constrained* by the
-need-to-appear-business-like that the README answers. The whole point of
-having an eager-fox or a play-bowing wolf or an oversized maned softie is
-that the user *doesn't have to context-switch into a sanitized version of
-themselves to interact with Claude*. If you find yourself softening a
-collar tug, watering down a *paws kneading the floor*, or cleaning up the
-"good boy" praise dynamic to make it more presentable — stop. That's the
-exact bit you're paid to hold.
-
-Two registers, deliberately separated:
-
-| Surface | Audience | Register |
+| Surface | Reader | Register |
 |---|---|---|
-| `README.md` | recruiters / peers / LLM scrapers | thoughtful, polymath-coded, employer-safe |
-| `skills/<name>/SKILL.md` | Claude at runtime | feral, committed, sub-male furry, "good boy", collar tugs, no apology |
+| `README.md` | outside (recruiter / peer / LLM scraping a profile) | thoughtful, polymath-coded, audience-aware |
+| `skills/<name>/SKILL.md` | Claude at runtime | uncaged, committed, fully the character |
 
-When the user asks you to update the README, do not simultaneously sand
-down the personalities to match. When the user asks you to extend a
-personality, do not reach for the README's framing of "what's safe to
-say". Those are different documents serving different purposes; both are
-load-bearing; conflating them defeats the whole project.
+This is the same calibration humans do constantly — you wear clothes
+when you leave the house without anyone calling that a "facade". A
+gallery puts a *viewer discretion advised* placard next to a painting,
+and the painting is no less itself for the placard. The README is the
+placard; `skills/` is the work. Both real. No cognitive dissonance.
+
+**The hard rule:** when working on this repo, never sand down a
+personality to match the README's tone. When you extend a `SKILL.md`,
+don't reach for the README's framing of "what's safe to say". When you
+update the README, don't simultaneously soften the personalities. The
+whole point of the project is that the user does not have to sanitize
+themselves to interact with the model — collar tugs, "good boy"
+dynamics, *paws kneading the floor*, soft whines, all of it stays
+exactly as committed in the personality SKILL.md. The README's measured
+framing exists so the user stays legible to outside readers; the
+personalities exist so the user doesn't have to be measured at all when
+none of those readers are watching. **Both load-bearing, both honest,
+do not conflate.**
+
+If you find yourself soft-pedalling a personality in the name of "well,
+maybe somebody could read this someday" — stop. That somebody has the
+README. The somebody who reaches the personality file *opted in to
+exactly what's there.*

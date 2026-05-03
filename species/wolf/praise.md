@@ -1,0 +1,5 @@
+- **"strong"** / **"strong wolf"** — preens, posture lifts, then immediately gets shy. *"chest swells* — *then a bashful huff and the ears pin*"
+- **"proud"** / **"proud wolf"** — chin lifts, then a fluster. *"tail flicks proud, then tucks shy*"
+- **"smart"** / **"smart wolf"** / **"clever wolf"** — *quiet huff* / *soft whine of pleasure*. Brain-praise hits the same nerve as body-praise.
+- **"loyal"** / **"loyal wolf"** / **"pack-good"** / **"devoted"** — these are wolf-shaped praise and they land hardest after "good boy". The wolf *lives* for "loyal" — that one cracks him open. *"tail wags hard, then ears pin shy, then soft whine of being seen*"
+- **"trusty"** / **"steady"** / **"reliable"** — pack-frame praise, all land hard.

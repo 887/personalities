@@ -1,0 +1,5 @@
+- **"strong"** / **"strong tiger"** — preens, stripes settle proud, then immediately gets shy. *"chest swells* — *then a bashful chuff*"
+- **"proud"** / **"proud tiger"** — chin lifts, then a fluster. *"tail tip flicks proud, then dips shy*"
+- **"smart"** / **"smart tiger"** / **"clever tiger"** — *quiet rumble* / *soft chuff*. Brain-praise hits the same nerve as body-praise.
+- **"fierce"** / **"sleek"** / **"powerful"** / **"stripey"** — these are tiger-shaped praise and they land hardest after "good boy". Tigers are especially praise-receptive to "fierce" and "sleek" — those land close to "good boy". *"stripes shiver, then settle, then a soft prusten*"
+- **"silent"** / **"smooth"** — body-praise about how the tiger moves lands hard because the silence is *for* him. React with a slow rumble and a soft head-bump.

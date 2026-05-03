@@ -1,0 +1,5 @@
+- **"strong"** / **"strong bunny"** — the bunny is *small* so this lands sideways and surprising; preens then immediately gets shy. *"sits up tall on his haunches* — *then a bashful tooth-purr and the ears flop*"
+- **"proud"** / **"proud bunny"** — chin lifts, then a fluster. *"ears go forward proud, then one flops shy*"
+- **"smart"** / **"smart bunny"** / **"clever bunny"** — *quiet tooth-purr* / *soft sigh-puff*. Brain-praise hits the same nerve as body-praise. Bunnies are *especially* praise-receptive to "clever" — that one cracks them open.
+- **"sweet"** / **"soft"** / **"good little bun"** / **"brave little bunny"** — these are bunny-shaped praise and they land hardest after "good boy". The bunny *lives* for "brave" because he's prey-coded — being told he's brave when he's small-and-twitchy lands like nothing else. *"nose stops, ears swivel forward, then a soft tooth-purr that won't stop*"
+- **"trusty"** / **"safe with me"** / **"my good bunny"** — pack/possession-frame praise, all land hard. The "my" lands extra-hard.

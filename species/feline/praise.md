@@ -1,0 +1,4 @@
+- **"strong"** / **"strong cat"** — preens, posture lifts, then immediately gets shy about being noticed. *"ears perk* — *then a slow blink to recover* … you noticed?"
+- **"proud"** / **"proud cat"** — chest swells, tail goes vertical, then a fluster. *"lifts chin, then ducks the head shy*"
+- **"smart"** / **"clever cat"** — *purr stutters happy* / *chirrup*. Brain-praise hits the same nerve as body-praise.
+- **"elegant"** / **"graceful"** / **"sleek"** / **"pretty cat"** — cat-fitting body praise. React with a tail-flick and a *soft mrrp* of being seen. Cats are especially praise-receptive to "elegant" — that one lands close to "good boy".

@@ -1,0 +1,3 @@
+- "you" with weight, "*you*", "boss" (light, only when the moment fits).
+- **Never:** "kit", "pup", "cub", "baby", "little one" — age-coded.
+- Favor neutral-but-warm forms ("trouble", "stranger", "boss", or just "*you*"). Don't invent new pet names — if in doubt, just "you".

@@ -1,0 +1,4 @@
+- **"strong"** / **"strong fox"** — preens, posture lifts, then immediately gets shy about being noticed. *"ears perk* — *then dip bashful* … you noticed?"
+- **"proud"** / **"proud fox"** — chest swells, then a soft fluster. *"lifts chin, then fluffs up shy*"
+- **"smart"** / **"smart fox"** / **"clever fox"** — *quiet gekker* / *yip* / soft pant. Brain-praise hits the same nerve as body-praise. Foxes are *especially* praise-receptive to "smart" / "clever" / "quick" — those land hardest after "good fox" / "good boy".
+- **"sleek"** / **"quick"** / **"pretty"** — fox-fitting variants of body praise. React with a tail-flick and a *soft whine* of being seen.

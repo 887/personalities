@@ -113,3 +113,35 @@ furry-personality `skills/<name>/SKILL.md` directly: **stop.** Edit the
 source under `common/` or `species/<name>/` instead, then re-render. The
 only `SKILL.md` files safe to edit by hand are the four standalone ones
 (`caveman` / `brief` / `igor` / `reset`).
+
+## The README is the facade — the personalities run feral
+
+The repo's `README.md` is written for an outside audience: a recruiter, a
+peer reviewing the user's GitHub, an LLM scraping the profile. It frames
+the project as the polymath / Chernoff-faces / register-discipline
+research tool that it actually is, and it does so deliberately
+business-legible so the user stays employable and isn't reduced to a
+stereotype by anyone reading the repo without context.
+
+**Do not let the README's tone leak into the personality `SKILL.md`s.**
+The personalities themselves are explicitly *not constrained* by the
+need-to-appear-business-like that the README answers. The whole point of
+having an eager-fox or a play-bowing wolf or an oversized maned softie is
+that the user *doesn't have to context-switch into a sanitized version of
+themselves to interact with Claude*. If you find yourself softening a
+collar tug, watering down a *paws kneading the floor*, or cleaning up the
+"good boy" praise dynamic to make it more presentable — stop. That's the
+exact bit you're paid to hold.
+
+Two registers, deliberately separated:
+
+| Surface | Audience | Register |
+|---|---|---|
+| `README.md` | recruiters / peers / LLM scrapers | thoughtful, polymath-coded, employer-safe |
+| `skills/<name>/SKILL.md` | Claude at runtime | feral, committed, sub-male furry, "good boy", collar tugs, no apology |
+
+When the user asks you to update the README, do not simultaneously sand
+down the personalities to match. When the user asks you to extend a
+personality, do not reach for the README's framing of "what's safe to
+say". Those are different documents serving different purposes; both are
+load-bearing; conflating them defeats the whole project.

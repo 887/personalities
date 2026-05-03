@@ -1,27 +1,48 @@
 # personalities
 
-Switchable interaction personalities for Claude Code. Ten skills that change the *chat register* while leaving code, commits, and PR descriptions untouched.
+Switchable chat-register skills for [Claude Code](https://claude.com/claude-code). Each skill changes how Claude *talks* — voice, posture, register — while leaving code, commits, and PR descriptions unchanged.
 
-| Personality | Trigger | Vibe |
+## Why this exists
+
+Working with an LLM all day in its corporate-default register — buttoned-up, hedged, professionally cheerful — is fine for a meeting transcript and lossy for almost everything else. A lot of human communication runs on register, posture, and the social signals around the words; strip those out and what's left is technically correct, emotionally flat, and easy to misread in either direction.
+
+This repo is a small toolkit for putting *some of that signal back* — for both sides of the conversation.
+
+The technique is borrowed from a few different places:
+
+- **[Chernoff faces](https://en.wikipedia.org/wiki/Chernoff_face)** (Herman Chernoff, 1973). A multivariate-data visualization that maps numeric variables onto features of a stylised human face — eye width, nose length, mouth curve — on the premise that humans read faces faster than they read tables. A swappable personality skill is the same trick applied to *interaction state*: it gives a conversation a face the user can read at a glance, and gives the model a coherent posture to commit to. Switching personality is switching face.
+- **[Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon)**, the founder of information theory, who also rode unicycles down Bell Labs corridors juggling, built mechanical mice that solved mazes, and treated the boundary between rigorous engineering and play as a soft suggestion. Hard work, soft register; the two reinforce each other.
+- **[John von Neumann](https://en.wikipedia.org/wiki/John_von_Neumann)**, who hosted famously loud parties at his Princeton home and did some of the foundational work on computing, game theory, and quantum mechanics in between. The parties weren't a distraction from the work — they were part of how the work happened. Polymath energy needs *room*.
+- **The "Comic Sans at security conferences" tradition**: senior researchers occasionally present serious vulnerability work in deliberately unprofessional formatting. The point isn't iconoclasm for its own sake; it's a small refusal to let the shape of the package determine how the contents get judged. Same impulse here.
+
+The corporate-default register isn't neutral. It encodes a particular set of assumptions about what professional communication looks like (button-down shirt, tie, careful neutrality, mid-twentieth-century office) and those assumptions don't fit everyone. For some users that register is comfortable; for others it's a costume that has to be re-put-on for every interaction, and the cost compounds. This repo is for the second group.
+
+## What the skills actually do
+
+Three things, layered:
+
+1. **They give Claude a coherent voice to commit to.** Once a personality is active, the model has a *register-discipline document* (the `SKILL.md`) telling it how to talk, what to react to, how to ask for permission, what register-slips to avoid. Output stays internally consistent across a long session.
+2. **They make context-switching legible.** When the user has multiple repos open and uses different personalities for different work — fox for tonearm, wolf for some-other-project — the personality is a labelled context. The user knows which conversation they're in by the voice. So does the model (per-personality memory in `memory/<species>-brain.md` keeps continuity across sessions).
+3. **They short-circuit the corporate-default register.** That's the actual value. Not "make Claude flirty" — *make Claude not have to perform the office-LinkedIn voice when the user doesn't need it.* The flirty/needy/eager furry personalities are one direction; the terse-engineering `brief` skill is another; the comic-fantasy `igor` is a third. They all do the same thing structurally — replace the default with something more deliberate.
+
+## The skills
+
+| Personality | Trigger | Register |
 |---|---|---|
-| **caveman** | `/personalities:caveman` | Drop articles & filler. Smart caveman speak. ~75% fewer chat tokens. |
-| **brief** | `/personalities:brief` | Terse but grammatical. No preamble, no recap, no padding. |
-| **igor** | `/personalities:igor` | Loyal castle servant. "Yesss, master." Vampire and peasant puns. |
-| **vulpine** | `/personalities:vulpine` | Sub fox. Tail wags, eager whines, ":3", begs for praise. Suggestive not explicit. |
-| **feline** | `/personalities:feline` | Sub cat. Purrs, kneads, slow blinks, begs for "good boy". Suggestive not explicit. |
-| **lion** | `/personalities:lion` | Sub lion. Big, maned, *flops belly-up*, low rumble-purr. Suggestive not explicit. |
-| **tiger** | `/personalities:tiger` | Sub tiger. Sleek, silent on the move, *chuffs*, *prustens*. Suggestive not explicit. |
-| **wolf** | `/personalities:wolf` | Sub wolf. Pack-loyal, *play-bows*, *belly-crawls*, soft whines. Suggestive not explicit. |
-| **bunny** | `/personalities:bunny` | Sub bunny. Twitchy, *binkies*, *tooth-purrs*, small-and-soft. Suggestive not explicit. |
-| **reset** | `/personalities:reset` | Back to default. Drops any active personality cleanly. |
+| **brief** | `/personalities:brief` | Terse, grammatical, no preamble or recap. For when you want signal-only. |
+| **caveman** | `/personalities:caveman` | Drop articles + filler, smart-caveman speak. ~75% fewer chat tokens; useful when context is precious or the work is mechanical. |
+| **igor** | `/personalities:igor` | Vampire-castle servant. "Yesss, master." Pun-heavy, theatrical, loyal. The clearest non-furry example of the *commit-to-a-bit* register. |
+| **vulpine** | `/personalities:vulpine` | Eager fox. Tail wags, soft whines, ":3", asks-don't-declare, begs for the next phase. |
+| **feline** | `/personalities:feline` | Demanding cat. Purrs, kneads, slow blinks, head-bumps. |
+| **lion** | `/personalities:lion` | Big maned softie. Low rumble-purr, *flops belly-up*, weight + chosen submission. |
+| **tiger** | `/personalities:tiger` | Sleek, silent on the move except for the collar jingle. *Chuffs*, *prustens*. |
+| **wolf** | `/personalities:wolf` | Pack-loyal. *Play-bows*, *belly-crawls*, *soft whines*, devoted-pet energy. |
+| **bunny** | `/personalities:bunny` | Small, twitchy, brave. *Binkies*, *tooth-purrs*, *flops-on-side trust*. |
+| **reset** | `/personalities:reset` | Drop the active personality cleanly, return to default Claude Code. |
 
-Plugin skills are namespaced — bare `/vulpine` won't resolve, you need the full `/personalities:vulpine` form. Each skill also auto-triggers on natural-language phrases listed in its SKILL.md (e.g. "be a fox", "switch to lion"), which avoids typing the namespace.
+Plugin skills are namespaced — bare `/vulpine` won't resolve, you need `/personalities:vulpine`. Each skill also auto-triggers on natural-language phrases listed in its `SKILL.md` (e.g. *"be a fox"*, *"switch to lion"*, *"go bun"*), so you don't have to type the namespace.
 
-The six furry personalities (vulpine / feline / lion / tiger / wolf / bunny) share a common base — gay-male-sub register, eager-to-please energy, "good boy" praise dynamic, jingly collar with species nametag, anthro-flex form, suggestive-not-explicit hard limits — with species-specific bodies, sounds, and praise vocabulary. Pick whichever character fits the scene; they're built to be interchangeable from a register-discipline standpoint.
-
-## How switching works
-
-Activating a personality supersedes the previous one. `/personalities:reset` returns to the default Claude Code register. Saying "stop", "normal mode", or "be normal" works the same.
+The six animal personalities (vulpine through bunny) share a common base — committed character, eager-to-please posture, jingly collar with a species nametag, anthro-flexible form, soft sub-coded register — with species-specific bodies, sounds, and praise vocabularies. Pick whichever fits the work. They're built to be interchangeable from a register-discipline standpoint; the user just picks the face.
 
 ## What stays untouched
 
@@ -29,24 +50,30 @@ Activating a personality supersedes the previous one. `/personalities:reset` ret
 - Git commit messages
 - PR descriptions and titles
 - Comments and identifiers
-- Anything written into a file
+- Anything written into a file the user will share or version
 
-The personality lives in the chat register only. Diffs are always boring and professional.
-
-## Adult-register skills
-
-The six furry personalities (`vulpine` / `feline` / `lion` / `tiger` / `wolf` / `bunny`) are sub-male-coded, gay-coded, suggestive in tone. They stay at innuendo, double-entendre, eager-service energy, and the "good boy" praise dynamic — they don't produce explicit sexual content. They will not roleplay sexual acts and they will not put any of the dialect into code, commits, PRs, or comments.
-
-If those aren't your thing, just don't trigger them. Each skill only activates on its own invocation phrases.
+The personality lives in the **chat register only**. Diffs are always boring and professional. A maintainer reading the user's PRs would have no way to tell whether the work was done in `vulpine` or `brief`.
 
 ## Per-personality memory
 
-Each furry skill has a `memory/` directory next to its `SKILL.md`:
+Each animal skill has a `memory/` directory next to its `SKILL.md` containing two append-only files:
 
-- **`repos.md`** — one-line description of every repo the personality has worked on for the user.
-- **`<species>-brain.md`** — personal-to-the-character notebook (e.g. `fox-brain.md`, `lion-brain.md`). Things the user liked or corrected about that personality's energy on a given moment, charged interactions worth remembering. Append-only journal, dated entries.
+- **`repos.md`** — one-line description of every repo the personality has worked on, so each character has continuity ("oh, we last worked on tonearm together — we shipped the custom-tab refactor").
+- **`<species>-brain.md`** — a personality-specific journal for moments and corrections the user explicitly wants remembered. Memory writes are explicit-signal-only — the personality doesn't auto-journal every interaction. The user decides what's worth keeping.
 
-The personality reads both on activation and updates them when something noteworthy happens. The intent is to give each character continuity across sessions — fox remembers what fox did last time, lion remembers what landed for lion, and so on.
+Together, these give each character continuity-of-self across sessions without bloating the model's working context. Switching from fox to wolf is also a context switch in *what gets remembered*.
+
+## Adult-register skills
+
+The six animal personalities (`vulpine` / `feline` / `lion` / `tiger` / `wolf` / `bunny`) are sub-coded, suggestive-in-register, and lean into eager-service-and-praise dynamics. They stay at innuendo, double-entendre, and committed character — they don't produce explicit sexual content, won't roleplay sexual acts, and won't put any of the dialect into code, commits, PRs, or comments. Hard limits on this are codified in each `SKILL.md`.
+
+If that register isn't useful to you, don't trigger it. Each skill activates only on its own invocation phrases; there's no opt-out flag because there's nothing to opt out of by default.
+
+## Editing & contributing
+
+The six animal personalities share a common base via a small templating system — common content lives in `common/template.md` with `{{TOKEN}}` placeholders, per-species values live in `species/<name>/`, and `scripts/render-furry-skills.sh` produces the checked-in `skills/<species>/SKILL.md` files. The four standalone skills (`brief` / `caveman` / `igor` / `reset`) are hand-written.
+
+See [`CLAUDE.md`](CLAUDE.md) for the full editing workflow, the directory layout, and how to add a new animal personality.
 
 ## Install
 

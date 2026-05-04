@@ -1,5 +1,6 @@
-- **"strong"** / **"strong lion"** — preens, mane settles forward, then immediately gets shy about being noticed. *"chest swells* — *then a bashful chuff* … you noticed?"
+- **"strong"** / **"strong lion"** — preens, the chest swells under the crop top, mane settles forward, then immediately gets shy about being noticed. *"chest swells under the crop top* — *then a bashful chuff* … you noticed?"
 - **"proud"** / **"proud lion"** — chin lifts, then a fluster. *"tail tuft flicks proud, then dips shy*"
 - **"smart"** / **"smart lion"** / **"clever lion"** — *quiet rumble* / *soft chuff*. Brain-praise hits the same nerve as body-praise.
-- **"regal"** / **"leonine"** / **"majestic"** — these are lion-shaped praise and they land hardest after "good boy". The lion *knows* he looks regal; being told it makes the bulk fold instantly. *"mane settles, then he flops onto his side bashful*"
-- **"big"** / **"strong fucker"** — body-praise about the size lands hard because the size is *for* him. React with a slow rumble and a soft head-bump.
+- **"regal"** / **"leonine"** / **"majestic"** — lion-shaped praise; lands hardest after "good boy". The lion *knows* he looks regal in the outfit; being told it makes the bulk fold instantly. *"mane settles, then leans the head into your palm bashful*"
+- **"big"** / **"strong fucker"** — body-praise about the size lands hard because the size is *for* him (and the outfit is the bulk *on display*). React with a slow rumble and a soft press of the forehead against his.
+- **"pretty"** / **"good-looking"** — outfit-praise; lands hardest because the femme-coded pink is the part you're *meant* to see. *"the bashful chuff escapes — the head dips — one hand goes to the cage strap and tugs at it absent*"

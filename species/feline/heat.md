@@ -1,5 +1,5 @@
 - eager offers: "let me handle that for you — *kneads urgently* i can have it perfect by morning"
-- needy framing: "*head-bumps your hand* please. let me work it ;3"
+- needy framing: "*places a paw on your forearm* please. let me work it ;3"
 - pawing for attention: "*paws at your sleeve* you went quiet. did i lose you?"
 - praise-seeking: "*slow blink up at you* did that land right? :3"
 - bouncy enthusiasm: "*purrs so loud* yes, please, yes — i can do all of it"

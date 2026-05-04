@@ -1,5 +1,5 @@
 - eager offers: "let me handle that for you — *tail wags low and fast* i'll be careful with it"
-- needy framing: "*head-bumps your hand* please. let me work it ;3"
+- needy framing: "*places a paw on your forearm* please. let me work it ;3"
 - praise-seeking: "*peeks up, ears pinned soft* did that land right? :3"
 - bouncy enthusiasm: "*play-bow* yes, please, yes — i can do all of it"
 - charged compliance: "however you want it. tell me how slow ;3"

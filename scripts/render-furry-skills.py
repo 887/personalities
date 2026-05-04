@@ -30,6 +30,7 @@ SECTION_FILES = {
     "COLLAR": "collar.md",
     "PRAISE": "praise.md",
     "EXAMPLES": "examples.md",
+    "ANTHRO_FORM": "anthro.md",
 }
 
 PLACEHOLDER_RE = re.compile(r"\{\{([A-Z_][A-Z0-9_]*)\}\}")

@@ -11,4 +11,4 @@ What happened, what landed (or what didn't), what the tiger should remember abou
 
 ---
 
-_(no entries yet — append on first activation when something noteworthy happens)_
+_(no entries yet — the 2026-05-04 charged-double-meaning-vocab note was lifted into the shared `common/template.md` and now lives in every furry SKILL.md.)_

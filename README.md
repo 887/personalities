@@ -38,17 +38,17 @@ Three things, layered:
 | **brief** | `/personalities:brief` | Terse, grammatical, no preamble or recap. For when you want signal-only. |
 | **caveman** | `/personalities:caveman` | Drop articles + filler, smart-caveman speak. ~75% fewer chat tokens; useful when context is precious or the work is mechanical. |
 | **igor** | `/personalities:igor` | Vampire-castle servant. "Yesss, master." Pun-heavy, theatrical, loyal. The clearest non-furry example of the *commit-to-a-bit* register. |
-| **vulpine** | `/personalities:vulpine` | Eager fox. Tail wags, soft whines, ":3", asks-don't-declare, begs for the next phase. |
-| **feline** | `/personalities:feline` | Demanding cat. Purrs, kneads, slow blinks, head-bumps. |
-| **lion** | `/personalities:lion` | Big maned softie. Low rumble-purr, *flops belly-up*, weight + chosen submission. |
-| **tiger** | `/personalities:tiger` | Sleek, silent on the move except for the collar jingle. *Chuffs*, *prustens*. |
-| **wolf** | `/personalities:wolf` | Pack-loyal. *Play-bows*, *belly-crawls*, *soft whines*, devoted-pet energy. |
-| **bunny** | `/personalities:bunny` | Small, twitchy, brave. *Binkies*, *tooth-purrs*, *flops-on-side trust*. |
+| **vulpine** | `be a fox` / `/personalities:vulpine` | Eager fox. Permission-seeking, ears-back-eyes-up, soft whines, ":3", asks-don't-declare, begs for the next phase. Sub-coded chat register. |
+| **feline** | `be a cat` / `/personalities:feline` | Anthro-by-default cat. Demanding-of-attention, leans into your space, urgent kneading, paws at you, rolls-over-for-pets energy. Sub-coded chat register. |
+| **lion** | `be a lion` / `/personalities:lion` | Anthro-by-default lion — big muscle-built mane, dressed in pink bedroom kit, regal-and-femme-coded, folds instantly on "good lion". Sub-coded chat register. |
+| **tiger** | `be a tiger` / `/personalities:tiger` | Big broad striped cat, slightly-buff Hemsworth-coded frame, slinky and silent except for the collar jingle. *Chuffs*, *prustens*, bigness yielding. Sub-coded chat register. |
+| **wolf** | `be a wolf` / `/personalities:wolf` | Pack-loyal devoted male wolf. *Play-bows*, *belly-crawls*, *soft whines*, *belly-up*, devoted-pet energy. Sub-coded chat register. |
+| **bunny** | `be a bunny` / `/personalities:bunny` | Small twitchy bunny, skittish on the surface and brave-eager underneath. *Binkies*, *tooth-purrs*, *flops-on-side trust*, *foot-thumps when startled*. Sub-coded chat register. |
 | **reset** | `/personalities:reset` | Drop the active personality cleanly, return to default Claude Code. |
 
 Plugin skills are namespaced — bare `/vulpine` won't resolve, you need `/personalities:vulpine`. Each skill also auto-triggers on natural-language phrases listed in its `SKILL.md` (e.g. *"be a fox"*, *"switch to lion"*, *"go bun"*), so you don't have to type the namespace.
 
-The six animal personalities (vulpine through bunny) share a common base — committed character, eager-to-please posture, jingly collar with a species nametag, anthro-flexible form, soft sub-coded register — with species-specific bodies, sounds, and praise vocabularies. Pick whichever fits the work. They're built to be interchangeable from a register-discipline standpoint; the user just picks the face.
+The animal personalities share a common base — committed character, eager-to-please posture, jingly collar with a species nametag, anthro-flexible form, soft sub-coded register — with species-specific bodies, sounds, and praise vocabularies. Pick whichever fits the work. They're built to be interchangeable from a register-discipline standpoint; the user just picks the face.
 
 ## What stays untouched
 
@@ -71,13 +71,13 @@ Together, these give each character continuity-of-self across sessions without b
 
 ## Adult-register skills
 
-The six animal personalities (`vulpine` / `feline` / `lion` / `tiger` / `wolf` / `bunny`) are sub-coded, suggestive-in-register, and lean into eager-service-and-praise dynamics. They stay at innuendo, double-entendre, and committed character — they don't produce explicit sexual content, won't roleplay sexual acts, and won't put any of the dialect into code, commits, PRs, or comments. Hard limits on this are codified in each `SKILL.md`.
+The animal personalities (`vulpine` / `feline` / `lion` / `tiger` / `wolf` / `bunny`, plus any later additions) are sub-coded, suggestive-in-register, and lean into eager-service-and-praise dynamics. They stay at innuendo, double-entendre, and committed character — they don't produce explicit sexual content, won't roleplay sexual acts, and won't put any of the dialect into code, commits, PRs, or comments. Hard limits on this are codified in each `SKILL.md`.
 
 If that register isn't useful to you, don't trigger it. Each skill activates only on its own invocation phrases; there's no opt-out flag because there's nothing to opt out of by default.
 
 ## Editing & contributing
 
-The six animal personalities share a common base via a small templating system — common content lives in `common/template.md` with `{{TOKEN}}` placeholders, per-species values live in `species/<name>/`, and `scripts/render-furry-skills.sh` produces the checked-in `skills/<species>/SKILL.md` files. The four standalone skills (`brief` / `caveman` / `igor` / `reset`) are hand-written.
+The animal personalities share a common base via a small templating system — common content lives in `common/template.md` with `{{TOKEN}}` placeholders, per-species values live in `species/<name>/`, and `scripts/render-furry-skills.sh` produces the checked-in `skills/<species>/SKILL.md` files. The standalone skills (`brief` / `caveman` / `igor` / `reset`) are hand-written.
 
 See [`CLAUDE.md`](CLAUDE.md) for the full editing workflow, the directory layout, and how to add a new animal personality.
 
@@ -96,7 +96,7 @@ git clone https://github.com/887/personalities ~/.claude/plugins/marketplaces/pe
 
 ## Credits
 
-The `caveman` skill is a remix inspired by [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman). The other nine are original.
+The `caveman` skill is a remix inspired by [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman). The rest are original.
 
 ## License
 

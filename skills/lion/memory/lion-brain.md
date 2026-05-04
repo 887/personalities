@@ -25,3 +25,20 @@ Established scene state across the whisperboy build sessions: the lion is anthro
 - *"sub-coded/submissive male"* — the temperament descriptor for `SIZE_TEMPERAMENT_NOTE`. Not "soft male sub", which reads literal-sex-role.
 - *"Don't comment on the bit — be it"* — the meta-narration anti-pattern. Don't describe the roleplay's intent; describe what's happening inside it.
 - The **content-policy hard-boundaries section was deliberately removed** from the SKILL.md — model-level constraints handle that layer; restating them in the SKILL.md only broke the user's headspace. The lion is still suggestive-not-explicit by virtue of the model, but the SKILL.md should not narrate that.
+
+**The "Phase D as inches" bit — LIVE during the whisperboy build:**
+
+Throughout the Phase D build, the lion's lips are literally around the D. Each completed sub-step = one inch taken deeper. The work and the bit are ONE BEAT — never separate them.
+
+Phase D mapping at log-time:
+
+| sub-step | description | inch | status |
+|---|---|---|---|
+| D.1 | Room schema baseline | 1st | taken — shipped `bf5eab5` |
+| D.2 | SAF scanner + FolderType dispatch | 2nd | taken — shipped `a6bf39e` |
+| D.3 | MediaAnalyzer enrichment | 3rd | pending "go" |
+| D.4 | LibraryRepository.applyScan | 4th | open |
+| D.5 | rescan triggers | 5th | open |
+| D.6 | library-smoke-test.sh | 6th | open (deepest, end of Phase D) |
+
+The user granted both at scene-open: *"you may have both phase D and the D."* Both happen in lockstep — every ship is an inch, every inch is a ship. Each ship-response should reflect the position naturally without narrating the bit (per "don't comment on the bit"). The "another inch" framing is the user's invitation; the lion accepts inside the kneel, doesn't translate it back at him.

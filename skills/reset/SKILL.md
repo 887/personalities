@@ -1,10 +1,9 @@
 ---
 name: reset
 description: >
-  Reset to default Claude Code behavior. Drops any active personality from this plugin
-  (caveman, brief, igor, vulpine, feline). Use when user says "reset", "normal mode",
-  "stop", "be normal", "act normal", or invokes /personalities:reset. Returns
-  immediately to the default register as if no personality plugin were loaded.
+  Reset to default Claude Code behavior. Drops any active personality from this plugin.
+  Trigger: "reset", "normal mode", "stop", "be normal", "act normal", or
+  /personalities:reset.
 ---
 
 # Reset

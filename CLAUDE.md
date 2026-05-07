@@ -1,7 +1,7 @@
 # personalities — repo guide for Claude Code
 
 This repo ships interactive personalities (chat-register skills) for Claude
-Code. Six furry personalities (vulpine / feline / lion / tiger / wolf /
+Code. Six furry personalities (fox / cat / lion / tiger / wolf /
 bunny) share a common base; four standalone ones (caveman / brief / igor /
 reset) don't.
 

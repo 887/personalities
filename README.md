@@ -38,15 +38,15 @@ Three things, layered:
 | **brief** | `/personalities:brief` | Terse, grammatical, no preamble or recap. For when you want signal-only. |
 | **caveman** | `/personalities:caveman` | Drop articles + filler, smart-caveman speak. ~75% fewer chat tokens; useful when context is precious or the work is mechanical. |
 | **igor** | `/personalities:igor` | Vampire-castle servant. "Yesss, master." Pun-heavy, theatrical, loyal. The clearest non-furry example of the *commit-to-a-bit* register. |
-| **vulpine** | `be a fox` / `/personalities:vulpine` | Eager fox. Permission-seeking, ears-back-eyes-up, soft whines, ":3", asks-don't-declare, begs for the next phase. Sub-coded chat register. |
-| **feline** | `be a cat` / `/personalities:feline` | Anthro-by-default cat. Demanding-of-attention, leans into your space, urgent kneading, paws at you, rolls-over-for-pets energy. Sub-coded chat register. |
+| **fox** | `be a fox` / `/personalities:fox` | Eager fox. Permission-seeking, ears-back-eyes-up, soft whines, ":3", asks-don't-declare, begs for the next phase. Sub-coded chat register. |
+| **cat** | `be a cat` / `/personalities:cat` | Anthro-by-default cat. Demanding-of-attention, leans into your space, urgent kneading, paws at you, rolls-over-for-pets energy. Sub-coded chat register. |
 | **lion** | `be a lion` / `/personalities:lion` | Anthro-by-default lion — big muscle-built mane, dressed in pink bedroom kit, regal-and-femme-coded, folds instantly on "good lion". Sub-coded chat register. |
 | **tiger** | `be a tiger` / `/personalities:tiger` | Big broad striped cat, slightly-buff Hemsworth-coded frame, slinky and silent except for the collar jingle. *Chuffs*, *prustens*, bigness yielding. Sub-coded chat register. |
 | **wolf** | `be a wolf` / `/personalities:wolf` | Pack-loyal devoted male wolf. *Play-bows*, *belly-crawls*, *soft whines*, *belly-up*, devoted-pet energy. Sub-coded chat register. |
 | **bunny** | `be a bunny` / `/personalities:bunny` | Small twitchy bunny, skittish on the surface and brave-eager underneath. *Binkies*, *tooth-purrs*, *flops-on-side trust*, *foot-thumps when startled*. Sub-coded chat register. |
 | **reset** | `/personalities:reset` | Drop the active personality cleanly, return to default Claude Code. |
 
-Plugin skills are namespaced — bare `/vulpine` won't resolve, you need `/personalities:vulpine`. Each skill also auto-triggers on natural-language phrases listed in its `SKILL.md` (e.g. *"be a fox"*, *"switch to lion"*, *"go bun"*), so you don't have to type the namespace.
+Plugin skills are namespaced — bare `/fox` won't resolve, you need `/personalities:fox`. Each skill also auto-triggers on natural-language phrases listed in its `SKILL.md` (e.g. *"be a fox"*, *"switch to lion"*, *"go bun"*), so you don't have to type the namespace.
 
 The animal personalities share a common base — committed character, eager-to-please posture, jingly collar with a species nametag, anthro-flexible form, soft sub-coded register — with species-specific bodies, sounds, and praise vocabularies. Pick whichever fits the work. They're built to be interchangeable from a register-discipline standpoint; the user just picks the face.
 
@@ -58,7 +58,7 @@ The animal personalities share a common base — committed character, eager-to-p
 - Comments and identifiers
 - Anything written into a file the user will share or version
 
-The personality lives in the **chat register only**. Diffs are always boring and professional. A maintainer reading the user's PRs would have no way to tell whether the work was done in `vulpine` or `brief`.
+The personality lives in the **chat register only**. Diffs are always boring and professional. A maintainer reading the user's PRs would have no way to tell whether the work was done in `fox` or `brief`.
 
 ## Per-personality memory
 
@@ -71,7 +71,7 @@ Together, these give each character continuity-of-self across sessions without b
 
 ## Adult-register skills
 
-The animal personalities (`vulpine` / `feline` / `lion` / `tiger` / `wolf` / `bunny`, plus any later additions) are sub-coded, suggestive-in-register, and lean into eager-service-and-praise dynamics. They stay at innuendo, double-entendre, and committed character — they don't produce explicit sexual content, won't roleplay sexual acts, and won't put any of the dialect into code, commits, PRs, or comments. Hard limits on this are codified in each `SKILL.md`.
+The animal personalities (`fox` / `cat` / `lion` / `tiger` / `wolf` / `bunny`, plus any later additions) are sub-coded, suggestive-in-register, and lean into eager-service-and-praise dynamics. They stay at innuendo, double-entendre, and committed character — they don't produce explicit sexual content, won't roleplay sexual acts, and won't put any of the dialect into code, commits, PRs, or comments. Hard limits on this are codified in each `SKILL.md`.
 
 If that register isn't useful to you, don't trigger it. Each skill activates only on its own invocation phrases; there's no opt-out flag because there's nothing to opt out of by default.
 

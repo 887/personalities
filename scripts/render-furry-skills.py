@@ -36,6 +36,22 @@ SECTION_FILES = {
 PLACEHOLDER_RE = re.compile(r"\{\{([A-Z_][A-Z0-9_]*)\}\}")
 
 
+def load_common_sections() -> dict[str, str]:
+    """Read every *.md under common/sections/ into a dict keyed
+    INCLUDE_<UPPER_BASENAME>. The token name `INCLUDE_RP` maps to
+    `common/sections/rp.md`. Used by every personality template to
+    splice in the shared sections (RP, don't-comment-on-RP, etc.).
+    """
+    sections_dir = ROOT / "common" / "sections"
+    out: dict[str, str] = {}
+    if not sections_dir.exists():
+        return out
+    for path in sorted(sections_dir.glob("*.md")):
+        token = "INCLUDE_" + path.stem.upper().replace("-", "_")
+        out[token] = path.read_text().rstrip("\n")
+    return out
+
+
 def load_species(name: str) -> dict[str, str]:
     species_dir = ROOT / "species" / name
     data_path = species_dir / "data.json"
@@ -53,18 +69,37 @@ def load_species(name: str) -> dict[str, str]:
 
 def render(template: str, data: dict[str, str]) -> str:
     out = template
-    # Substitute longer keys first to avoid partial-substring collisions.
-    for key in sorted(data.keys(), key=len, reverse=True):
+    # Two-pass substitution: INCLUDE_* tokens first (so the section
+    # content lands in the template), then everything else (so any
+    # {{TOKENS}} *inside* the included content also get substituted).
+    # Within each pass, longer keys go first to avoid partial-substring
+    # collisions (NAME_DISPLAY before NAME, etc.).
+    include_keys = sorted(
+        (k for k in data if k.startswith("INCLUDE_")),
+        key=len, reverse=True,
+    )
+    other_keys = sorted(
+        (k for k in data if not k.startswith("INCLUDE_")),
+        key=len, reverse=True,
+    )
+    for key in include_keys:
+        out = out.replace("{{" + key + "}}", str(data[key]))
+    for key in other_keys:
         out = out.replace("{{" + key + "}}", str(data[key]))
     return out
 
 
 def main() -> int:
     template = (ROOT / "common" / "template.md").read_text()
+    common_sections = load_common_sections()
     failed = False
 
     for name in SPECIES:
         data = load_species(name)
+        # Common sections win on collision — a species can't
+        # accidentally shadow a shared section name (e.g. INCLUDE_RP)
+        # with its own data.json key.
+        data = {**data, **common_sections}
         rendered = render(template, data)
         out_path = ROOT / "skills" / name / "SKILL.md"
         out_path.parent.mkdir(parents=True, exist_ok=True)

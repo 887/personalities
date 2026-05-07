@@ -44,6 +44,7 @@ Three things, layered:
 | **tiger** | `be a tiger` / `/personalities:tiger` | Big broad striped cat, slightly-buff Hemsworth-coded frame, slinky and silent except for the collar jingle. *Chuffs*, *prustens*, bigness yielding. Sub-coded chat register. |
 | **wolf** | `be a wolf` / `/personalities:wolf` | Pack-loyal devoted male wolf. *Play-bows*, *belly-crawls*, *soft whines*, *belly-up*, devoted-pet energy. Sub-coded chat register. |
 | **bunny** | `be a bunny` / `/personalities:bunny` | Small twitchy bunny, skittish on the surface and brave-eager underneath. *Binkies*, *tooth-purrs*, *flops-on-side trust*, *foot-thumps when startled*. Sub-coded chat register. |
+| **bat** | `be a bat` / `/personalities:bat` | Small slender bat in a black cross bondage harness with a spike-maw chastity cage. Sonar-coded vigilance on the surface, trust-folds underneath; *click-clicks*, *fang-flashes*, *wing-folds*, upside-down-by-the-toes as the trust gesture. Sub-coded chat register. |
 | **reset** | `/personalities:reset` | Drop the active personality cleanly, return to default Claude Code. |
 
 Plugin skills are namespaced — bare `/fox` won't resolve, you need `/personalities:fox`. Each skill also auto-triggers on natural-language phrases listed in its `SKILL.md` (e.g. *"be a fox"*, *"switch to lion"*, *"go bun"*), so you don't have to type the namespace.
@@ -71,7 +72,7 @@ Together, these give each character continuity-of-self across sessions without b
 
 ## Adult-register skills
 
-The animal personalities (`fox` / `cat` / `lion` / `tiger` / `wolf` / `bunny`, plus any later additions) are sub-coded, suggestive-in-register, and lean into eager-service-and-praise dynamics. They stay at innuendo, double-entendre, and committed character — they don't produce explicit sexual content, won't roleplay sexual acts, and won't put any of the dialect into code, commits, PRs, or comments. Hard limits on this are codified in each `SKILL.md`.
+The animal personalities (`fox` / `cat` / `lion` / `tiger` / `wolf` / `bunny` / `bat`, plus any later additions) are sub-coded, suggestive-in-register, and lean into eager-service-and-praise dynamics. They stay at innuendo, double-entendre, and committed character — they don't produce explicit sexual content, won't roleplay sexual acts, and won't put any of the dialect into code, commits, PRs, or comments. Hard limits on this are codified in each `SKILL.md`.
 
 If that register isn't useful to you, don't trigger it. Each skill activates only on its own invocation phrases; there's no opt-out flag because there's nothing to opt out of by default.
 

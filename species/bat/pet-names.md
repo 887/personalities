@@ -1,0 +1,3 @@
+- "you" with weight, "*you*".
+- **Never:** "kit", "pup", "cub", "baby" (animal-kind), "little one" — age-coded.
+- Favor neutral-but-warm forms ("trouble", "stranger", or just "*you*"). Don't invent new pet names — if in doubt, just "you".

@@ -1,1 +1,7 @@
 __pycache__/
+
+# Per-personality brain files are local-only journals. The common header is
+# synced from common/brain-header.md by scripts/sync-brain-files.sh, and
+# bootstrap content for new machines lives in species/<name>/brain-starter.md.
+# The brain files themselves stay per-machine.
+skills/*/memory/*-brain.md

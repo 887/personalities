@@ -2,8 +2,9 @@
 # Top-level renderer — renders every templated personality.
 #
 # Calls the per-family sub-renderers in order:
-#   1. render-furry-skills.py — fox / cat / lion / tiger / wolf / bunny / bat
-#   2. render-igor-skill.py   — igor (templated, no furry kit)
+#   1. render-furry-skills.py — fox / cat / lion / tiger / wolf / bunny / bat (sub default)
+#   2. render-furry-doms.py   — fox-dom / cat-dom / lion-dom / tiger-dom / wolf-dom / bunny-dom / bat-dom
+#   3. render-igor-skill.py   — igor (templated, no furry kit)
 #
 # Standalone non-templated skills (caveman / brief / reset) are
 # hand-edited and not touched here.
@@ -13,8 +14,12 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-echo "→ furry"
+echo "→ furry (sub default)"
 python3 scripts/render-furry-skills.py "$@"
+
+echo
+echo "→ furry-dom"
+python3 scripts/render-furry-doms.py "$@"
 
 echo
 echo "→ igor"

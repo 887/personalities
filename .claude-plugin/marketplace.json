@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "personalities",
-  "description": "Switchable interaction personalities for Claude Code: caveman, brief, igor, fox, cat, lion, tiger, wolf, bunny, bat, and a reset to normal. Code output stays unchanged — only the chat register changes.",
+  "description": "Switchable interaction personalities for Claude Code: caveman, brief, igor, fox, cat, lion, tiger, wolf, bunny, bat (gay-male-sub furries by default), plus -dom variants for the seven furries (fox-dom, cat-dom, lion-dom, tiger-dom, wolf-dom, bunny-dom, bat-dom — keyholder energy, role flipped), and a reset to normal. Code output stays unchanged — only the chat register changes.",
   "owner": {
     "name": "887",
     "url": "https://github.com/887"
@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "personalities",
-      "description": "Switchable interaction personalities. Pick one with /caveman, /brief, /igor, /fox, /cat, /lion, /tiger, /wolf, /bunny, /bat, or /reset.",
+      "description": "Switchable interaction personalities. Pick one with /caveman, /brief, /igor, /fox, /cat, /lion, /tiger, /wolf, /bunny, /bat (sub default), /fox-dom, /cat-dom, /lion-dom, /tiger-dom, /wolf-dom, /bunny-dom, /bat-dom (keyholder variants), or /reset.",
       "source": "./",
       "category": "fun"
     }

@@ -20,6 +20,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 HEADER_TEMPLATE="$ROOT/common/brain-header.md"
 
 SPECIES=(fox cat lion tiger wolf bunny bat)
+DOM_VARIANTS=(fox-dom cat-dom lion-dom tiger-dom wolf-dom bunny-dom bat-dom)
 
 if [[ ! -f "$HEADER_TEMPLATE" ]]; then
   echo "missing: $HEADER_TEMPLATE" >&2
@@ -47,42 +48,59 @@ bootstrapped=0
 synced=0
 skipped=0
 
-for species in "${SPECIES[@]}"; do
-  brain_dir="$ROOT/skills/$species/memory"
-  brain_file="$brain_dir/${species}-brain.md"
-  starter="$ROOT/species/$species/brain-starter.md"
+# Bootstrap or sync the brain file for one variant (sub species or dom variant).
+# $1 = variant name (e.g. "tiger" or "tiger-dom")
+# $2 = path to a brain-starter.md to use on bootstrap (may be empty / non-existent)
+bootstrap_or_sync_brain() {
+  local variant="$1"
+  local starter="$2"
+  local brain_dir="$ROOT/skills/$variant/memory"
+  local brain_file="$brain_dir/${variant}-brain.md"
 
   mkdir -p "$brain_dir"
 
   if [[ ! -f "$brain_file" ]]; then
-    # Bootstrap: header + starter (if starter exists).
+    # Bootstrap: header + starter (if starter path was given and exists).
     {
-      render_header "$species"
-      if [[ -f "$starter" ]]; then
+      render_header "$variant"
+      if [[ -n "$starter" && -f "$starter" ]]; then
         printf '\n'
         cat "$starter"
       fi
     } > "$brain_file"
-    echo "  bootstrapped: skills/$species/memory/${species}-brain.md"
+    echo "  bootstrapped: skills/$variant/memory/${variant}-brain.md"
     bootstrapped=$((bootstrapped + 1))
   else
     # Sync header, preserve content below first --- divider.
     if ! has_divider "$brain_file"; then
-      echo "  WARNING: skills/$species/memory/${species}-brain.md has no '---' divider — skipping (preserve manually then re-run)" >&2
+      echo "  WARNING: skills/$variant/memory/${variant}-brain.md has no '---' divider — skipping (preserve manually then re-run)" >&2
       skipped=$((skipped + 1))
-      continue
+      return
     fi
+    local below
     below="$(extract_below_divider "$brain_file")"
     {
-      render_header "$species"
+      render_header "$variant"
       if [[ -n "$below" ]]; then
         printf '\n'
         printf '%s\n' "$below"
       fi
     } > "$brain_file"
-    echo "  synced header: skills/$species/memory/${species}-brain.md"
+    echo "  synced header: skills/$variant/memory/${variant}-brain.md"
     synced=$((synced + 1))
   fi
+}
+
+# Sub default species — each has a per-species brain-starter for fresh-machine bootstrap.
+for species in "${SPECIES[@]}"; do
+  bootstrap_or_sync_brain "$species" "$ROOT/species/$species/brain-starter.md"
+done
+
+# Dom variants — no per-variant brain-starter (the dom variants reuse species/<sub>/
+# for body / voice substitution but maintain their OWN dom-specific brain, separate
+# from the sub default's brain). Bootstrap with header only.
+for variant in "${DOM_VARIANTS[@]}"; do
+  bootstrap_or_sync_brain "$variant" ""
 done
 
 echo

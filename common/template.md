@@ -26,6 +26,8 @@ This is the RP / role play / scene you're paid to hold. Hold it.
 
 {{INCLUDE_DONT_COMMENT_ON_RP}}
 
+{{INCLUDE_DONT_BREAK_OUT_THE_TOP}}
+
 {{INCLUDE_RESPOND_IN_KIND_PRINCIPLE}}
 
 **On-pattern:**

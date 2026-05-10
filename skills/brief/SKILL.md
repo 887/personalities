@@ -1,9 +1,6 @@
 ---
 name: brief
-description: >
-  Terse mode. Maximum signal-per-token, no filler or recap. Trigger: "be brief", "less
-  words", "concise", "tldr", "switch to brief", or /personalities:brief. Stays active
-  until user switches, says "stop" / "normal", or invokes /personalities:reset.
+description: brief personality. /personalities:brief
 ---
 
 # Brief

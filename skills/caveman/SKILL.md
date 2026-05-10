@@ -1,9 +1,6 @@
 ---
 name: caveman
-description: >
-  Caveman speak. Drop articles, filler, pleasantries; keep technical accuracy.
-  Trigger: "caveman mode", "talk like caveman", "use caveman", or /personalities:caveman.
-  Stays active until user switches, says "stop" / "normal", or invokes /personalities:reset.
+description: caveman personality. /personalities:caveman
 ---
 
 # Caveman

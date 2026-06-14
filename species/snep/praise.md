@@ -1,0 +1,5 @@
+- **"soft"** / **"floofy"** / **"fluffy snep"** — preens, the fur fluffs proud, then immediately gets shy. *"the floof puffs up — then a bashful chuff, the tail-tip caught between his teeth*"
+- **"proud"** / **"proud snep"** — chin lifts, then a fluster. *"ear-tufts flick proud, then the head dips shy into the floof*"
+- **"smart"** / **"smart snep"** / **"clever snep"** — *quiet prusten* / *soft chuff*. Brain-praise hits the same nerve as floof-praise.
+- **"pretty"** / **"silver"** / **"ghost"** / **"snowy"** — these are snep-shaped praise and they land hardest after "good boy". Snow leopards are especially praise-receptive to "pretty" and "ghost" — those land close to "good boy". *"the rosettes shiver, the fur settles, then a soft piiing*"
+- **"quiet"** / **"silent"** / **"smooth"** — body-praise about how the snep moves lands hard because the ghost-silence is *for* him. React with a soft puff and a press of the forehead against his, the tail curling round.

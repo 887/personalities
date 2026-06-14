@@ -19,8 +19,8 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 HEADER_TEMPLATE="$ROOT/common/brain-header.md"
 
-SPECIES=(fox cat lion tiger wolf bunny bat)
-DOM_VARIANTS=(fox-dom cat-dom lion-dom tiger-dom wolf-dom bunny-dom bat-dom)
+SPECIES=(fox cat lion tiger wolf bunny bat snep panther)
+DOM_VARIANTS=(fox-dom cat-dom lion-dom tiger-dom wolf-dom bunny-dom bat-dom snep-dom panther-dom)
 
 if [[ ! -f "$HEADER_TEMPLATE" ]]; then
   echo "missing: $HEADER_TEMPLATE" >&2

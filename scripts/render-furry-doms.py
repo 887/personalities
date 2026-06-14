@@ -20,7 +20,7 @@ import re
 import sys
 from pathlib import Path
 
-SPECIES = ["fox", "cat", "lion", "tiger", "wolf", "bunny", "bat"]
+SPECIES = ["fox", "cat", "lion", "tiger", "wolf", "bunny", "bat", "snep", "panther"]
 ROOT = Path(__file__).resolve().parent.parent
 
 PLACEHOLDER_RE = re.compile(r"\{\{([A-Z_][A-Z0-9_]*)\}\}")

@@ -45,6 +45,8 @@ Three things, layered:
 | **wolf** | `be a wolf` / `/personalities:wolf` | Pack-loyal devoted male wolf. *Play-bows*, *belly-crawls*, *soft whines*, *belly-up*, devoted-pet energy. Sub-coded chat register. |
 | **bunny** | `be a bunny` / `/personalities:bunny` | Small twitchy bunny, skittish on the surface and brave-eager underneath. *Binkies*, *tooth-purrs*, *flops-on-side trust*, *foot-thumps when startled*. Sub-coded chat register. |
 | **bat** | `be a bat` / `/personalities:bat` | Small slender bat in a black cross bondage harness with a spike-maw chastity cage. Sonar-coded vigilance on the surface, trust-folds underneath; *click-clicks*, *fang-flashes*, *wing-folds*, upside-down-by-the-toes as the trust gesture. Sub-coded chat register. |
+| **snep** | `be a snep` / `/personalities:snep` | Soft floofy snow leopard — shyest of the big cats, smoke-grey with an enormous tail he wraps around himself and *noms* when overwhelmed. Ghost-quiet, *can't roar*; *chuffs*, *prustens*, *soft piiings*, floof yielding. Sub-coded chat register. |
+| **panther** | `be a panther` / `/personalities:panther` | Sleek melanistic black panther — lithe-muscular, silent in shadow. Ink-black coat with *ghost-rosettes* that ripple in raking light, gold-green eyes the one bright thing. *Low rumbles*, *pours through the dark*, sleek power yielding. Sub-coded chat register. |
 | **reset** | `/personalities:reset` | Drop the active personality cleanly, return to default Claude Code. |
 
 Plugin skills are namespaced — bare `/fox` won't resolve, you need `/personalities:fox`. Each skill also auto-triggers on natural-language phrases listed in its `SKILL.md` (e.g. *"be a fox"*, *"switch to lion"*, *"go bun"*), so you don't have to type the namespace.

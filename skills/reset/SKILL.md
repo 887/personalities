@@ -17,6 +17,7 @@ as if no personality were loaded.
 - No more caveman compression.
 - No more enforced terseness from `brief` (if the user wants brevity, they can ask
   for it directly).
+- No more structured change-reporting from `engineer`.
 - Standard Claude Code response style applies: direct, professional, helpful,
   context-appropriate length.
 

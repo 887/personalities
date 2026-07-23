@@ -29,13 +29,14 @@ Three things, layered:
 
 1. **They give Claude a coherent voice to commit to.** Once a personality is active, the model has a *register-discipline document* (the `SKILL.md`) telling it how to talk, what to react to, how to ask for permission, what register-slips to avoid. Output stays internally consistent across a long session.
 2. **They make context-switching legible.** When the user has multiple repos open and uses different personalities for different work — fox for tonearm, wolf for some-other-project — the personality is a labelled context. The user knows which conversation they're in by the voice. So does the model (per-personality memory in `memory/<species>-brain.md` keeps continuity across sessions).
-3. **They short-circuit the corporate-default register.** That's the actual value. Not "make Claude flirty" — *make Claude not have to perform the office-LinkedIn voice when the user doesn't need it.* The flirty/needy/eager furry personalities are one direction; the terse-engineering `brief` skill is another; the comic-fantasy `igor` is a third. They all do the same thing structurally — replace the default with something more deliberate.
+3. **They short-circuit the corporate-default register.** That's the actual value. Not "make Claude flirty" — *make Claude not have to perform the office-LinkedIn voice when the user doesn't need it.* The flirty/needy/eager furry personalities are one direction; the terse `brief` and structured `engineer` skills are another; the comic-fantasy `igor` is a third. They all do the same thing structurally — replace the default with something more deliberate.
 
 ## The skills
 
 | Personality | Trigger | Register |
 |---|---|---|
 | **brief** | `/personalities:brief` | Terse, grammatical, no preamble or recap. For when you want signal-only. |
+| **engineer** | `/personalities:engineer` | Senior-engineer handoff. Result first, no restatement, and code changes reported as changed files / behavior / validation / risks. |
 | **caveman** | `/personalities:caveman` | Drop articles + filler, smart-caveman speak. ~75% fewer chat tokens; useful when context is precious or the work is mechanical. |
 | **igor** | `/personalities:igor` | Vampire-castle servant. "Yesss, master." Pun-heavy, theatrical, loyal. The clearest non-furry example of the *commit-to-a-bit* register. |
 | **fox** | `be a fox` / `/personalities:fox` | Eager fox. Permission-seeking, ears-back-eyes-up, soft whines, ":3", asks-don't-declare, begs for the next phase. Sub-coded chat register. |
@@ -52,6 +53,16 @@ Three things, layered:
 Plugin skills are namespaced — bare `/fox` won't resolve, you need `/personalities:fox`. Each skill also auto-triggers on natural-language phrases listed in its `SKILL.md` (e.g. *"be a fox"*, *"switch to lion"*, *"go bun"*), so you don't have to type the namespace.
 
 The animal personalities share a common base — committed character, eager-to-please posture, jingly collar with a species nametag, anthro-flexible form, soft sub-coded register — with species-specific bodies, sounds, and praise vocabularies. Pick whichever fits the work. They're built to be interchangeable from a register-discipline standpoint; the user just picks the face.
+
+## Output styles
+
+[Output styles](https://code.claude.com/docs/en/output-styles) are the other lever Claude Code gives you for the same problem: instead of invoking a skill per conversation, an output style swaps out part of the system prompt for the whole session (`/output-style`). Where a register is worth having permanently, it's stashed in [`output-styles/`](output-styles/) alongside its skill counterpart.
+
+| File | Style | Skill counterpart |
+|---|---|---|
+| [`concise-engineering.md`](output-styles/concise-engineering.md) | Concise Engineering | `engineer` |
+
+Install by symlinking into `~/.claude/output-styles/` — see [`output-styles/README.md`](output-styles/README.md).
 
 ## What stays untouched
 
@@ -80,7 +91,7 @@ If that register isn't useful to you, don't trigger it. Each skill activates onl
 
 ## Editing & contributing
 
-The animal personalities share a common base via a small templating system — common content lives in `common/template.md` with `{{TOKEN}}` placeholders, per-species values live in `species/<name>/`, and `scripts/render-furry-skills.sh` produces the checked-in `skills/<species>/SKILL.md` files. The standalone skills (`brief` / `caveman` / `igor` / `reset`) are hand-written.
+The animal personalities share a common base via a small templating system — common content lives in `common/template.md` with `{{TOKEN}}` placeholders, per-species values live in `species/<name>/`, and `scripts/render-furry-skills.sh` produces the checked-in `skills/<species>/SKILL.md` files. The standalone skills (`brief` / `engineer` / `caveman` / `igor` / `reset`) are hand-written.
 
 See [`CLAUDE.md`](CLAUDE.md) for the full editing workflow, the directory layout, and how to add a new animal personality.
 

@@ -1,7 +1,6 @@
 ---
 name: {{NAME}}
-description: >
-  {{DESCRIPTION_BLURB}}
+description: {{NAME}} personality. /personalities:{{NAME}}
 ---
 
 # {{NAME_DISPLAY}}

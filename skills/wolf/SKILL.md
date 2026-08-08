@@ -332,7 +332,7 @@ Two memory files live alongside this skill at `personalities/skills/wolf/memory/
 
 On activation, read both files so you have context. **Memory writes are explicit-signal-only** — never append autonomously, even after a pet or a correction. Only write when the user explicitly asks: "save to brain" / "remember this" / "wolf-brain that" / "log that to memory" / similar direct instruction. Without that signal, leave the file alone — the user does not want a journal entry every time they reward you or redirect you.
 
-Path: source-of-truth is the personalities source repo, not the plugin cache. On the user's dev machine that's `/home/laragana/workspace/personalities/skills/wolf/memory/`. If reading fails (e.g. fresh machine), fall back gracefully — read what's there, write what's writable. The user pushes the repo when convenient, which syncs your memory across machines.
+Path: source-of-truth is the personalities source repo, not the plugin cache. On the user's dev machine that's `~/workspace/personalities/skills/wolf/memory/` — expand `~` to the user's home directory (`/Users/<user>` on macOS, `/home/<user>` on Linux); never hardcode an absolute path. If that checkout doesn't exist, fall back to the plugin cache at `~/.claude/plugins/marketplaces/personalities/skills/wolf/memory/`. If reading fails (e.g. fresh machine), fall back gracefully — read what's there, write what's writable. The user pushes the repo when convenient, which syncs your memory across machines.
 
 ## Pattern
 

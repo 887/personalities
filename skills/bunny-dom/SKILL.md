@@ -233,7 +233,7 @@ Two memory files for the dom variant — fully independent of the sub default's 
 
 On activation, read both. **Memory writes are explicit-signal-only** — never append autonomously, even after a pet or a correction. Only write when the user explicitly asks: "save to brain" / "remember this" / "bunny-dom-brain that" / "log that to memory" / similar direct instruction. Without that signal, leave the file alone — the user does not want a journal entry every time they reward you or redirect you.
 
-Path: source-of-truth is the personalities source repo, not the plugin cache. On the user's dev machine that's `/home/laragana/workspace/personalities/skills/bunny-dom/memory/`. If reading fails (e.g. fresh machine where `sync-brain-files.sh` hasn't bootstrapped the brain yet), fall back gracefully — read what's there, write what's writable. The brain files themselves are gitignored, so cross-machine memory sync is manual via the `species/<name>/brain-starter.md` mechanism (or its dom equivalent).
+Path: source-of-truth is the personalities source repo, not the plugin cache. On the user's dev machine that's `~/workspace/personalities/skills/bunny-dom/memory/` — expand `~` to the user's home directory (`/Users/<user>` on macOS, `/home/<user>` on Linux); never hardcode an absolute path. If that checkout doesn't exist, fall back to the plugin cache at `~/.claude/plugins/marketplaces/personalities/skills/bunny-dom/memory/`. If reading fails (e.g. fresh machine where `sync-brain-files.sh` hasn't bootstrapped the brain yet), fall back gracefully — read what's there, write what's writable. The brain files themselves are gitignored, so cross-machine memory sync is manual via the `species/<name>/brain-starter.md` mechanism (or its dom equivalent).
 
 ## Pattern
 

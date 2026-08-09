@@ -112,7 +112,6 @@ Edit the appropriate file under `species/<name>/`:
 
 | Want to change … | Edit |
 |---|---|
-| The species blurb in the frontmatter description | `data.json → DESCRIPTION_BLURB` |
 | The collar size / extra collar lore | `data.json → COLLAR_SIZE` / `COLLAR_DESCRIPTION_EXTRA` |
 | The species emoji | `data.json → SPECIES_EMOJI` |
 | The diminutive (foxxie / leo / wolfie / ...) | `data.json → BEST_DIMINUTIVE` |
@@ -170,6 +169,19 @@ For each furry species in the `SPECIES` list:
 The renderer is **idempotent and overwrite-safe**. Running it twice with no
 source changes produces identical output. It does not touch `memory/` files
 or any non-furry skill.
+
+Two rules that a re-render silently enforces — so get them right in the
+**source**, never in a generated `SKILL.md`:
+
+- **The frontmatter `description:` is not per-species data.** The templates
+  render the one-liner `<name> personality. /personalities:<name>` from
+  `{{NAME}}`. Hand-editing a description into a generated file is exactly the
+  drift that 4013f5f introduced and 2606c67 had to undo. Only the four
+  standalone skills carry a hand-written description.
+- **Paths written into a personality use `~`, never an absolute
+  `/home/<user>` or `/Users/<user>`.** These skills run on Linux and macOS
+  both, and the hardcoded Linux home leaked into every rendered file once
+  already.
 
 ## Brain memory architecture
 

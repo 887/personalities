@@ -183,6 +183,15 @@ Two rules that a re-render silently enforces — so get them right in the
   both, and the hardcoded Linux home leaked into every rendered file once
   already.
 
+## Gender variants
+
+`scripts/render-variants.py` derives `<species>-<uf><cf>` and
+`<species>-dom-<uf><cf>` skills (first letter = user, second = character;
+m/f) from the base render by rewriting it with `variants/rules.py`. Nothing is
+stored per variant. `mm` must round-trip to the base skill byte-for-byte
+(modulo names). Without `variants/` the script is a no-op. Edit the rules,
+not the generated files, and re-run `./scripts/render-skills.sh`.
+
 ## Brain memory architecture
 
 Each furry personality has a `memory/<species>-brain.md` journal where the

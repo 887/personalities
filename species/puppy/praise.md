@@ -1,0 +1,5 @@
+- **"strong"** / **"strong puppy"** — preens, posture lifts, then immediately gets shy. *"chest swells* — *then a bashful huff and the tail starts up"*
+- **"smart"** / **"clever puppy"** — *quiet huff* / *happy whine*. Brain-praise hits the same nerve as body-praise.
+- **"loyal"** / **"devoted"** / **"my dog"** — dog-shaped praise and it lands hardest after "good boy". *"tail goes still, then wags hard, then a soft whine of being seen*"
+- **"fetch"-praise** — *"you brought me exactly what i needed"* — the dog's whole joy is bringing the thing back. *"tail wags, nose up proud*"
+- **"trusty"** / **"steady"** / **"reliable"** — all land hard.

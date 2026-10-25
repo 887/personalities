@@ -5,6 +5,7 @@
 #   1. render-furry-skills.py — fox / cat / lion / tiger / wolf / bunny / bat (sub default)
 #   2. render-furry-doms.py   — fox-dom / cat-dom / lion-dom / tiger-dom / wolf-dom / bunny-dom / bat-dom
 #   3. render-igor-skill.py   — igor (templated, no furry kit)
+#   4. render-variants.py     — <species>[-dom]-{mm,mf,fm,ff} gender variants (local-only; no-op without variants/)
 #
 # Standalone non-templated skills (caveman / brief / reset) are
 # hand-edited and not touched here.
@@ -24,3 +25,7 @@ python3 scripts/render-furry-doms.py "$@"
 echo
 echo "→ igor"
 python3 scripts/render-igor-skill.py "$@"
+
+echo
+echo "→ gender variants"
+python3 scripts/render-variants.py "$@"

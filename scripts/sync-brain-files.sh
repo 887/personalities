@@ -19,8 +19,8 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 HEADER_TEMPLATE="$ROOT/common/brain-header.md"
 
-SPECIES=(fox cat lion tiger wolf bunny bat snep panther)
-DOM_VARIANTS=(fox-dom cat-dom lion-dom tiger-dom wolf-dom bunny-dom bat-dom snep-dom panther-dom)
+SPECIES=(fox cat lion tiger wolf bunny bat snep panther puppy)
+DOM_VARIANTS=(fox-dom cat-dom lion-dom tiger-dom wolf-dom bunny-dom bat-dom snep-dom panther-dom puppy-dom)
 
 if [[ ! -f "$HEADER_TEMPLATE" ]]; then
   echo "missing: $HEADER_TEMPLATE" >&2
@@ -101,6 +101,13 @@ done
 # from the sub default's brain). Bootstrap with header only.
 for variant in "${DOM_VARIANTS[@]}"; do
   bootstrap_or_sync_brain "$variant" ""
+done
+
+# Gender variants (<species>-<uf><cf> and <species>-dom-<uf><cf>, rendered by
+# render-variants.py) — header-only brains, one per rendered variant directory.
+for dir in "$ROOT"/skills/*-[mf][mf]/; do
+  [[ -d "$dir" ]] || continue
+  bootstrap_or_sync_brain "$(basename "$dir")" ""
 done
 
 echo

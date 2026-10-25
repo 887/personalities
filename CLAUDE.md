@@ -188,8 +188,9 @@ Two rules that a re-render silently enforces — so get them right in the
 `scripts/render-variants.py` derives `<species>-<uf><cf>` and
 `<species>-dom-<uf><cf>` skills (first letter = user, second = character;
 m/f) from the base render by rewriting it with `variants/rules.py`. Nothing is
-stored per variant. `mm` must round-trip to the base skill byte-for-byte
-(modulo names). Without `variants/` the script is a no-op. Edit the rules,
+stored per variant. `mm` is the base text itself; the unsuffixed
+`skills/<species>/` and `<species>-dom/` skills are no longer shipped (their
+`memory/` dirs remain). Without `variants/` the script is a no-op. Edit the rules,
 not the generated files, and re-run `./scripts/render-skills.sh`.
 
 ## Brain memory architecture
